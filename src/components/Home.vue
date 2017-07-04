@@ -5,6 +5,7 @@
 		  <!-- <mt-swipe-item>1</mt-swipe-item>
 		   -->
 		   <mt-swipe-item v-for="item in list">
+
 		   	<img :src="item.img">
 		   </mt-swipe-item>
 		</mt-swipe>
@@ -69,7 +70,7 @@ import common from '../kits/common.js';
 			getimgs(){
 				// 实现轮播组件中的数据请求
 				// 1.0 确定url
-				var url = common.apidomain + '/api/getlunbo';
+				var url = 'http://182.254.146.100:8899/api/getlunbo';
 
 				// 2.0 调用$http.get()
 				this.$http.get(url).then(function(response){

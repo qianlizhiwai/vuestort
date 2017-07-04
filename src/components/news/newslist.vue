@@ -34,11 +34,12 @@ import common from '../../kits/common.js';
 		created(){
 			this.getnewslist();
 		},
+	
 		methods:{
 		// 获取api中的新闻资讯数据
 		getnewslist(){
 			// 1.0 确定url
-			var url = common.apidomain+'/api/getnewslist';
+			var url = 'http://182.254.146.100:8899/api/getnewslist';
 
 			// 2.0 利用$http.get方法请求到数据
 			this.$http.get(url).then(function(res){
@@ -75,7 +76,7 @@ import common from '../../kits/common.js';
 
 				// 5.0 将正常的message数据赋值给this.list
 				this.list = body.message;
-
+			
 			});
 		}
 		}
